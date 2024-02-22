@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Arrière-plan dégradé -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradient_background"
+        android:scaleType="fitXY"/>
+
+    <!-- Titre: "Créditer Compte" -->
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créditer Compte"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Barre de recherche -->
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Numéro de compte"/>
+
+        <!-- Icône de recherche -->
+        <ImageButton
+            android:id="@+id/imageButtonSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+
+    <!-- Image pour l'image de compte -->
+    <ImageView
+        android:id="@+id/imageViewCompte"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/searchLayout"
+        android:src="@drawable/default_image" />
+
+    <!-- Section Détails -->
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewCompte"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Numéro -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewNumeroLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numéro:"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!-- Solde -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewSoldeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solde:"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewSolde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!-- Devise -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDeviseLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Devise:"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewDevise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/creditLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataLayout"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Montant à créditer -->
+        <TextView
+            android:id="@+id/textViewMontantLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Montant à créditer:"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextMontant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Entrez le montant à créditer"
+            android:imeOptions="actionDone"
+            android:maxLines="1" />
+
+        <!-- Section des boutons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp">
+
+            <!-- Bouton Créditer -->
+            <Button
+                android:id="@+id/buttonCrediter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Créditer"
+                android:background="@drawable/button_rectangular"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- Bouton Annuler -->
+            <Button
+                android:id="@+id/buttonAnnuler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Annuler"
+                android:background="@drawable/button_rectangular"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bouton Retour au Menu Principal -->
+    <Button
+        android:id="@+id/buttonBackToMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Principal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_rectangular"/>
+</RelativeLayout>

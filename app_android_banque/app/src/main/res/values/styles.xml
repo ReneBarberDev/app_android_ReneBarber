@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Custom style for popup menu -->
+    <style name="MyToolbarMenuStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/menu_color</item>
+    </style>
+
+    <style name="AppMenuItem" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textColor">@color/menu_item</item>
+    </style>
+
+</resources>

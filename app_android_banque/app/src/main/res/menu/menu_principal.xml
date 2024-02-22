@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:itemIconTint="@color/menu_icon_color">
+
+    <!-- Item pour la page d'accueil -->
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        app:showAsAction="always"
+        android:title="@string/add" />
+
+    <!-- Item pour la liste -->
+    <item
+        android:id="@+id/list"
+        android:icon="@drawable/list"
+        app:showAsAction="always"
+        android:title="@string/list"/>
+
+    <!-- Item pour ajouter -->
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/add"
+        app:showAsAction="always"
+        android:title="@string/add" />
+
+    <!-- Item pour le débit -->
+    <item
+        android:id="@+id/debit"
+        android:icon="@drawable/debit"
+        app:showAsAction="always"
+        android:title="@string/debit" />
+
+    <!-- Item pour le crédit -->
+    <item
+        android:id="@+id/credit"
+        android:icon="@drawable/credit"
+        app:showAsAction="always"
+        android:title="@string/credit" />
+
+    <!-- Item pour fermer -->
+    <item
+        android:id="@+id/close"
+        android:icon="@drawable/close"
+        app:showAsAction="always"
+        android:title="@string/close"
+        android:layout_marginEnd="36dp" />
+
+    <!-- Item pour XML -->
+    <item
+        android:id="@+id/xml"
+        app:showAsAction="never"
+        android:title="@string/xml" >
+    </item>
+
+    <!-- Item pour JSON -->
+    <item
+        android:id="@+id/json"
+        app:showAsAction="never"
+        android:title="@string/json" >
+    </item>
+
+</menu>
+
+
+

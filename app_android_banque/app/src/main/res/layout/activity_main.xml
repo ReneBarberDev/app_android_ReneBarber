@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Arrière-plan dégradé -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradient_background"
+        android:scaleType="fitXY"/>
+
+    <!-- Bouton Liste des Comptes -->
+    <Button
+        android:id="@+id/btn_list_comptes"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Lister les comptes"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rectangular"/>
+
+    <!-- Bouton Nouveau Compte -->
+    <Button
+        android:id="@+id/btn_new_compte"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Ouvrir un compte"
+        android:layout_below="@id/btn_list_comptes"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rectangular"/>
+
+    <!-- Bouton Débiter un Compte -->
+    <Button
+        android:id="@+id/btn_debit_compte"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Débiter un compte"
+        android:layout_below="@id/btn_new_compte"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rectangular"/>
+
+    <!-- Bouton Créditer un Compte -->
+    <Button
+        android:id="@+id/btn_credit_compte"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Créditer un compte"
+        android:layout_below="@id/btn_debit_compte"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rectangular"/>
+
+    <!-- Bouton Fermer un Compte -->
+    <Button
+        android:id="@+id/btn_delete_compte"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Fermer un compte"
+        android:layout_below="@id/btn_credit_compte"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rectangular"/>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="add">Ajouter</string>
+    <string name="list">Lister</string>
+    <string name="close">Fermer</string>
+    <string name="debit">Debiter</string>
+    <string name="credit">Crediter</string>
+    <string name="xml">Exporter en XML</string>
+    <string name="json">Exporter en JSON</string>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Arrière-plan dégradé -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradient_background"
+        android:scaleType="fitXY" />
+
+    <!-- Titre: "Nouveau Compte" -->
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nouveau Compte"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Votre mise en page de contenu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/text_view_title"
+        android:layout_above="@id/buttonBackToMain">
+
+        <!-- Layout pour le type de compte -->
+        <LinearLayout
+            android:id="@+id/layout_type_compte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Titre: "Type de Compte" -->
+            <TextView
+                android:id="@+id/text_view_type_compte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de Compte"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- Groupe de boutons radio pour le type de compte -->
+        <RadioGroup
+            android:id="@+id/radio_group_type_compte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_button_cheque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chèque" />
+
+            <RadioButton
+                android:id="@+id/radio_button_epargne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Épargne" />
+
+            <RadioButton
+                android:id="@+id/radio_button_investissement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investissement" />
+
+        </RadioGroup>
+
+        <!-- Titre: "Devise" -->
+        <TextView
+            android:id="@+id/text_view_devise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Devise"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <!-- Groupe de boutons radio pour la devise -->
+        <RadioGroup
+            android:id="@+id/radio_group_devise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_button_cad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CAD" />
+
+            <RadioButton
+                android:id="@+id/radio_button_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD" />
+
+            <RadioButton
+                android:id="@+id/radio_button_eur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR" />
+
+        </RadioGroup>
+
+        <!-- Champ de texte pour le solde du compte -->
+        <EditText
+            android:id="@+id/edit_text_compte_solde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inscrire solde"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Bouton pour enregistrer le compte -->
+        <Button
+            android:id="@+id/btn_save_compte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter Compte"
+            android:background="@drawable/button_rectangular"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+
+    </LinearLayout>
+
+    <!-- Bouton pour revenir à l'activité principale -->
+    <Button
+        android:id="@+id/buttonBackToMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Principal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rectangular"/>
+
+</RelativeLayout>
